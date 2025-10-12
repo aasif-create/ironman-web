@@ -20,17 +20,26 @@ body{
   justify-content:center;
   min-height:100vh;
 }
-.bg{
-  position:fixed;
-  inset:0;
+.bg {
+  position: fixed;
+  inset: 0;
   background-image: url('images/IRONMAN\ PIC.jpg');
-  background-size:cover;
-  background-position:center;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   transform: scale(1.04);
-  filter: blur(2px) brightness(.2);
-  z-index:0;
-  transition:transform .6s ease;
+  filter: blur(6px) brightness(0.6);
+  z-index: 0;
+  transition: transform 0.6s ease;
 }
+
+@media (max-width: 480px) {
+  .bg {
+    background-position: center center;
+    transform: scale(1.02);
+  }
+}
+
 .bg::after{
   content:"";
   position:absolute;inset:0;
