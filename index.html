@@ -1,139 +1,20 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>IRON MAN — Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Iron Man — Welcome</title>
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div class="scene">
-  <div class="stars" aria-hidden="true">
-    <span class="star" style="--i:1"></span>
-    <span class="star" style="--i:2"></span>
-    <span class="star" style="--i:3"></span>
-    <span class="star" style="--i:4"></span>
-    <span class="star" style="--i:5"></span>
-    <span class="star" style="--i:6"></span>
-    <span class="star" style="--i:7"></span>
-    <span class="star" style="--i:8"></span>
-    <span class="star" style="--i:9"></span>
-    <span class="star" style="--i:10"></span>
-    <span class="star" style="--i:11"></span>
-    <span class="star" style="--i:12"></span>
-    <span class="star" style="--i:13"></span>
-    <span class="star" style="--i:14"></span>
-    <span class="star" style="--i:15"></span>
-    <span class="star" style="--i:16"></span>
-    <span class="star" style="--i:17"></span>
-    <span class="star" style="--i:18"></span>
-    <span class="star" style="--i:19"></span>
-    <span class="star" style="--i:20"></span>
-    <span class="star" style="--i:21"></span>
-    <span class="star" style="--i:22"></span>
-    <span class="star" style="--i:23"></span>
-    <span class="star" style="--i:24"></span>
+<div class="bg" role="img" aria-label="Iron Man background image"></div>
+<main class="wrap">
+  <div class="glass">
+    <button id="welcomeBtn" aria-label="Welcome">WELCOME</button>
   </div>
-
-  <header class="top" role="banner">
-    <div class="logo" aria-hidden="true">⚙️</div>
-    <nav role="navigation" aria-label="Main">
-      <a href="#">Home</a>
-      <a href="#features">Features</a>
-      <a href="#suit">Suit</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main class="hero" role="main">
-    <div class="helmet-wrap" aria-hidden="true">
-      <div class="helmet">
-        <div class="face"></div>
-        <div class="visor"></div>
-        <div class="chin"></div>
-        <div class="arc" aria-hidden="true"></div>
-        <div class="ring ring-1" aria-hidden="true"></div>
-        <div class="ring ring-2" aria-hidden="true"></div>
-      </div>
-    </div>
-
-    <div class="hero-text">
-      <a class="btn" href="#suit">Suit Up</a>
-      <button class="btn try" id="tryBtn" aria-pressed="false">TRY HERE</button>
-    </div>
-  </main>
-
-  <footer>
-    <small>Made with CSS — fan demo • not official.</small>
-  </footer>
-</div>
-
-<div id="video-overlay" class="video-overlay" aria-hidden="true" tabindex="-1">
-  <video id="introVideo" playsinline webkit-playsinline preload="auto" controls>
-    <source src="video/IRONMANCLIP.mp4" type="video/mp4">
-  </video>
-</div>
-
-<script>
-(function(){
-  const tryBtn = document.getElementById('tryBtn');
-  const overlay = document.getElementById('video-overlay');
-  const video = document.getElementById('introVideo');
-  const redirectTo = 'movies.html';
-  const hardRedirectTimeoutMs = 7000;
-  let hardTimeout = null;
-  let redirectTimer = null;
-
-  function showOverlay(){
-    overlay.classList.add('show');
-    overlay.setAttribute('aria-hidden','false');
-    overlay.focus();
-  }
-
-  function hideOverlayAndRedirect(){
-    overlay.classList.remove('show');
-    overlay.setAttribute('aria-hidden','true');
-    tryBtn.removeAttribute('aria-disabled');
-    tryBtn.style.pointerEvents = '';
-    window.location.href = redirectTo;
-  }
-
-  tryBtn.addEventListener('click', async function(e){
-    e.preventDefault();
-    if(tryBtn.getAttribute('aria-disabled') === 'true') return;
-    tryBtn.setAttribute('aria-disabled','true');
-    tryBtn.style.pointerEvents = 'none';
-    showOverlay();
-    video.currentTime = 0;
-    hardTimeout = setTimeout(hideOverlayAndRedirect, hardRedirectTimeoutMs);
-    try{
-      await video.play();
-    }catch(err){
-      clearTimeout(hardTimeout);
-      setTimeout(()=>{ window.location.href = redirectTo; }, 300);
-      return;
-    }
-    const redirectAfterMs = 5000;
-    redirectTimer = setTimeout(()=>{ clearTimeout(hardTimeout); window.location.href = redirectTo; }, redirectAfterMs);
-    video.addEventListener('ended', function onEnd(){
-      clearTimeout(redirectTimer);
-      clearTimeout(hardTimeout);
-      window.location.href = redirectTo;
-    }, { once: true });
-  });
-
-  overlay.addEventListener('click', function(e){
-    e.preventDefault();
-    try{ video.pause(); }catch(e){}
-    window.location.href = redirectTo;
-  });
-
-  overlay.addEventListener('keydown', function(e){
-    if(e.key === 'Escape'){ try{ video.pause(); }catch(e){} window.location.href = redirectTo; }
-  });
-
-  window.addEventListener('pagehide', function(){ try{ video.pause(); }catch(e){} clearTimeout(hardTimeout); clearTimeout(redirectTimer); });
-})();
-</script>
+  <a class="fallback" href="home.html" aria-hidden="false">Skip ➜</a>
+</main>
+<script src="index.js" defer></script>
 </body>
 </html>
