@@ -27,7 +27,7 @@ body{
   background-size:cover;
   background-position:center;
   transform: scale(1.04);
-  filter: blur(6px) brightness(.6);
+  filter: blur(2px) brightness(.2);
   z-index:0;
   transition:transform .6s ease;
 }
