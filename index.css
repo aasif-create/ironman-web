@@ -62,43 +62,40 @@ body{
   padding:24px;
   width:min(920px,94vw);
 }
-.glass{
-  width:clamp(220px,42vw,520px);
-  height:clamp(220px,42vw,520px);
-  border-radius:28px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-  box-shadow: var(--shadow);
-  position:relative;
-  overflow:visible;
-  border:1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(8px) saturate(120%);
-  padding:24px;
+#welcomeBtn {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, var(--red-1), var(--red-2));
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 4px solid rgba(255,255,255,0.2);
+  display: grid;
+  place-items: center;
+  transform: rotate(45deg);
+  position: relative;
+  box-shadow: 0 0 20px rgba(255,0,40,0.7), 0 0 40px rgba(255,0,40,0.4) inset;
 }
-#welcomeBtn{
-  width:clamp(120px,22vw,220px);
-  height:clamp(120px,22vw,220px);
-  border-radius:50%;
-  border:4px solid rgba(255,255,255,0.12);
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), rgba(255,255,255,0.02)), linear-gradient(135deg,var(--red-1),var(--red-2));
-  color:var(--text);
-  font-weight:700;
-  font-size:clamp(18px,4vw,36px);
-  letter-spacing:2px;
-  text-transform:uppercase;
-  cursor:pointer;
-  display:inline-grid;
-  place-items:center;
-  box-shadow: 0 8px 30px rgba(255,20,20,0.18), 0 2px 6px rgba(0,0,0,0.6);
-  transform:translateZ(0);
-  transition:transform .22s cubic-bezier(.2,.9,.3,1), box-shadow .22s;
-  outline:none;
-  user-select:none;
+
+#welcomeBtn::before,
+#welcomeBtn::after {
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  width:120%; height:120%;
+  border: 2px solid rgba(255,255,255,0.3);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 12%;
 }
-#welcomeBtn:focus{box-shadow:0 0 0 6px rgba(255,60,60,0.12), 0 8px 30px rgba(255,30,30,0.18)}
-#welcomeBtn:hover{transform:translateY(-6px) scale(1.02); box-shadow:0 18px 50px rgba(255,20,20,0.28)}
+#welcomeBtn::after {
+  width: 140%;
+  height: 140%;
+  border-color: rgba(255,255,255,0.15);
+}
+
+#welcomeBtn:focus{box-shadow:0 0 0 6px rgba(218, 205, 205, 0.986), 0 8px 30px rgba(255,30,30,0.18)}
+#welcomeBtn:hover{transform:translateY(-6px) scale(1.02); box-shadow:0 18px 50px rgb(234, 227, 227)}
 #welcomeBtn::after{
   content:"";
   position:absolute;
