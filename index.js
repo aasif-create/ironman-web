@@ -1,7 +1,7 @@
 const btn = document.getElementById('welcomeBtn');
 const video = document.getElementById('introVideo');
 const fallback = document.getElementById('fallbackLink');
-video.src = 'intro.mp4';
+video.src = 'video/IRONMANCLIP.mp4';
 btn.addEventListener('click', () => {
   btn.classList.add('pop');
   setTimeout(() => {
