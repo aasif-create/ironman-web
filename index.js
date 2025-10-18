@@ -1,7 +1,6 @@
 const btn = document.getElementById('welcomeBtn');
 const video = document.getElementById('introVideo');
 const bgImg = document.getElementById('bgImg');
-
 btn.addEventListener('click', async () => {
   btn.classList.add('pop');
   setTimeout(async () => {
@@ -38,7 +37,6 @@ function applyFit() {
   video.style.width = '100vw';
   video.style.height = '100vh';
 }
-
 window.addEventListener('load', applyFit);
 window.addEventListener('resize', applyFit);
 window.addEventListener('orientationchange', applyFit);
