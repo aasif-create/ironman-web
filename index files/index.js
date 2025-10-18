@@ -7,12 +7,12 @@ btn.addEventListener('click', async () => {
     btn.style.display = 'none';
     video.classList.add('show');
     try { await video.play(); }
-    catch (err) { try { video.muted = true; await video.play(); } catch { window.location.href = 'home.html'; return; } }
+    catch (err) { try { video.muted = true; await video.play(); } catch { window.location.href = '../home page/home.html'; return; } }
   }, 160);
 });
 
-video.addEventListener('ended', () => window.location.href = 'home.html');
-video.addEventListener('error', () => window.location.href = 'home.html');
+video.addEventListener('ended', () => window.location.href = '../home page/home.html');
+video.addEventListener('error', () => window.location.href = '../home page/home.html');
 
 btn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); } });
 
