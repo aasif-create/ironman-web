@@ -1,5 +1,6 @@
 const btn = document.getElementById('welcomeBtn');
 const video = document.getElementById('introVideo');
+const bgImg = document.getElementById('bgImg');
 
 btn.addEventListener('click', async () => {
   btn.classList.add('pop');
@@ -7,40 +8,38 @@ btn.addEventListener('click', async () => {
     btn.style.display = 'none';
     video.classList.add('show');
     try { await video.play(); }
-    catch (err) {
-      try { video.muted = true; await video.play(); }
-      catch { window.location.href = 'movies.html'; return; }
-    }
+    catch (err) { try { video.muted = true; await video.play(); } catch { window.location.href = 'movies.html'; return; } }
   }, 160);
 });
 
 video.addEventListener('ended', () => window.location.href = 'movies.html');
 video.addEventListener('error', () => window.location.href = 'movies.html');
 
-btn.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
-});
+btn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); } });
 
-function fitToViewport() {
-  const bg = document.querySelector('.bg');
+function applyFit() {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   if (vh > vw) {
-    bg.style.backgroundSize = 'contain';
-    bg.style.backgroundPosition = 'center center';
+    bgImg.style.objectFit = 'contain';
+    bgImg.style.objectPosition = 'center center';
     video.style.objectFit = 'contain';
     video.style.objectPosition = 'center center';
+    bgImg.style.transform = 'translateY(0)';
   } else {
-    bg.style.backgroundSize = 'cover';
-    bg.style.backgroundPosition = 'center top';
+    bgImg.style.objectFit = 'cover';
+    bgImg.style.objectPosition = 'center top';
     video.style.objectFit = 'cover';
     video.style.objectPosition = 'center center';
+    bgImg.style.transform = 'translateY(0)';
   }
+  bgImg.style.width = '100%';
+  bgImg.style.height = '100%';
   video.style.width = '100vw';
   video.style.height = '100vh';
 }
 
-window.addEventListener('load', fitToViewport);
-window.addEventListener('resize', fitToViewport);
-window.addEventListener('orientationchange', fitToViewport);
+window.addEventListener('load', applyFit);
+window.addEventListener('resize', applyFit);
+window.addEventListener('orientationchange', applyFit);
 document.addEventListener('visibilitychange', () => { if (document.hidden && !video.paused) video.pause(); });
