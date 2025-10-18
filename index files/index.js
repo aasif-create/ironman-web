@@ -7,12 +7,12 @@ btn.addEventListener('click', async () => {
     btn.style.display = 'none';
     video.classList.add('show');
     try { await video.play(); }
-    catch (err) { try { video.muted = true; await video.play(); } catch { window.location.href = 'movies.html'; return; } }
+    catch (err) { try { video.muted = true; await video.play(); } catch { window.location.href = 'home.html'; return; } }
   }, 160);
 });
 
-video.addEventListener('ended', () => window.location.href = 'movies.html');
-video.addEventListener('error', () => window.location.href = 'movies.html');
+video.addEventListener('ended', () => window.location.href = 'home.html');
+video.addEventListener('error', () => window.location.href = 'home.html');
 
 btn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); } });
 
