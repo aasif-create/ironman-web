@@ -64,26 +64,26 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-
   transform-origin:center;
   transition:transform .18s ease,box-shadow .18s,background .18s ease;
 }
-
-.corner button.action{
-  all:unset;
-  cursor:pointer;
-  width:100%;
-  height:100%;
-  display:grid;
-  place-items:center;
-  font-weight:800;
-  letter-spacing:0.8px;
-  color:#eaf6ff;
-  font-size:14px;
-  text-shadow:0 1px 0 rgba(0,0,0,0.45);
+.corner button.action {
+  all: unset;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(57,182,255,0.6);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
-
 .corner:focus-within{box-shadow:0 0 0 8px rgba(57,182,255,0.06)}
-.top-left{left:18%; top:18%;}
-.top-right{right:18%; top:18%;}
-.bottom-left{left:18%; bottom:18%;}
-.bottom-right{right:18%; bottom:18%;}
+.top-left{left:14%; top:18%;}
+.top-right{right:16%; top:18%;}
+.bottom-left{left:12%; bottom:18%;}
+.bottom-right{right:14%; bottom:18%;}
 
 .corner::before{
   content:"";
@@ -108,6 +108,25 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-
   text-shadow:none;
 }
 
+.corner.arc {
+  background: linear-gradient(180deg, rgba(137, 184, 211, 0.895), rgba(82, 169, 240, 0.884));
+  border: 1px solid rgb(87, 193, 255);
+  box-shadow: 0 12px 40px rgba(57,182,255,0.25);
+}
+
+.corner.arc:hover {
+  background: linear-gradient(180deg, rgb(235, 239, 241), rgb(236, 240, 244));
+  box-shadow: 0 20px 60px rgba(172, 183, 190, 0.853);
+}
+
+.corner.arc button.action {
+  color: #eaf6ff;
+}
+
+.corner.arc:hover button.action {
+  color: #c6c7c8;
+}
+
 .core-wrap{
   display:flex;
   align-items:center;
@@ -116,11 +135,13 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-
   z-index:3;
   pointer-events:auto;
   position:relative;
+  margin-top: 80px;
+  margin-left: -37px;
 }
 
 .reactor{
-  width:220px;
-  height:220px;
+  width:180px;
+  height:180px;
   border-radius:50%;
   display:grid;
   place-items:center;
@@ -154,9 +175,9 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-
   font-weight:900;
   letter-spacing:1px;
   color:#fff;
-  font-size:14px;
+  font-size:12px;
   line-height:1.05;
-  padding:10px 12px;
+  padding:8px 10px;
   border-radius:10px;
   pointer-events:none;
   mix-blend-mode:screen;
