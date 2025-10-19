@@ -170,7 +170,6 @@ body{
 #skipBtn:hover{
   background:black;
   color:var(--red-1);
-  transform:scale(1.05);
   box-shadow:0 0 15px rgba(255,0,0,0.6);
 }
 

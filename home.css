@@ -47,7 +47,6 @@ body {
 #backIntroBtn:hover {
   background: black;
   color: #ff1e3a;
-  transform: scale(1.05);
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
