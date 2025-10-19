@@ -1,276 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>IRON MAN — Movies</title>
-  <link rel="stylesheet" href="movies.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Iron Man Movies</title>
+<link rel="stylesheet" href="movies.css">
 </head>
 <body>
-  <canvas id="starfield" aria-hidden="true"></canvas>
+<header class="movies-header">
+  <h1>IRON MAN MOVIES</h1>
+</header>
 
-  <div class="scene3d">
-    <div class="space"></div>
-    <div class="grid3d" aria-hidden="true">
-      <div class="cube c1"></div>
-      <div class="cube c2"></div>
-      <div class="cube c3"></div>
-      <div class="cube c4"></div>
-      <div class="cube c5"></div>
-      <div class="cube c6"></div>
-      <div class="cube c7"></div>
-      <div class="cube c8"></div>
+<main class="movies-container">
+  <section class="movie">
+    <img src="images2/m1.jpg" alt="Iron Man">
+    <div class="movie-details">
+      <h2>Iron Man</h2>
+      <p><strong>Year:</strong> 2008</p>
+      <p><strong>Rating:</strong> 7.9 / 10</p>
+      <p><strong>Box Office:</strong> 5,156.18 cr</p>
     </div>
+  </section>
 
-    <header class="movies-header">
-      <h1>Iron Man — Movies (Enhanced)</h1>
-      <p class="subtitle">A cinematic entry — click any poster to see details</p>
-      <a class="back" href="index.html">← Back Home</a>
-      <div class="header-glow"></div>
-    </header>
+  <section class="movie right">
+    <img src="images2/m2.jpg" alt="Iron Man 2">
+    <div class="movie-details">
+      <h2>Iron Man 2</h2>
+      <p><strong>Year:</strong> 2010</p>
+      <p><strong>Rating:</strong> 6.9 / 10</p>
+      <p><strong>Box Office:</strong> 5,491.86 cr</p>
+    </div>
+  </section>
 
-    <main class="movies-list">
-      <div class="movie-card">
-        <div class="poster">I</div>
-        <div class="meta">
-          <h3>Iron Man (2008)</h3>
-          <p>Director: Jon Favreau · 2008</p>
-        </div>
-      </div>
+  <section class="movie">
+    <img src="images2/m3.jpg" alt="Iron Man 3">
+    <div class="movie-details">
+      <h2>Iron Man 3</h2>
+      <p><strong>Year:</strong> 2013</p>
+      <p><strong>Rating:</strong> 7.1 / 10</p>
+      <p><strong>Box Office:</strong> 10,699.51 cr</p>
+    </div>
+  </section>
 
-      <div class="movie-card">
-        <div class="poster">II</div>
-        <div class="meta">
-          <h3>The Incredible Hulk (2008)</h3>
-          <p>Shared MCU appearance · 2008</p>
-        </div>
-      </div>
+  <section class="movie right">
+    <img src="images2/m4.jpg" alt="The Avengers">
+    <div class="movie-details">
+      <h2>The Avengers</h2>
+      <p><strong>Year:</strong> 2012</p>
+      <p><strong>Rating:</strong> 8.0 / 10</p>
+      <p><strong>Box Office:</strong> 13,383.78 cr</p>
+    </div>
+  </section>
 
-      <div class="movie-card">
-        <div class="poster">II</div>
-        <div class="meta">
-          <h3>Iron Man 2 (2010)</h3>
-          <p>Director: Jon Favreau · 2010</p>
-        </div>
-      </div>
+  <section class="movie">
+    <img src="images2/m5.jpg" alt="Avengers: Age of Ultron">
+    <div class="movie-details">
+      <h2>Avengers: Age of Ultron</h2>
+      <p><strong>Year:</strong> 2015</p>
+      <p><strong>Rating:</strong> 7.3 / 10</p>
+      <p><strong>Box Office:</strong> 12,366.97 cr</p>
+    </div>
+  </section>
 
-      <div class="movie-card">
-        <div class="poster">III</div>
-        <div class="meta">
-          <h3>The Avengers (2012)</h3>
-          <p>Ensemble MCU · 2012</p>
-        </div>
-      </div>
+  <section class="movie right">
+    <img src="images2/m6.jpg" alt="Captain America: Civil War">
+    <div class="movie-details">
+      <h2>Captain America: Civil War</h2>
+      <p><strong>Year:</strong> 2016</p>
+      <p><strong>Rating:</strong> 7.8 / 10</p>
+      <p><strong>Box Office:</strong> 10,166.72 cr</p>
+    </div>
+  </section>
 
-      <div class="movie-card">
-        <div class="poster">III</div>
-        <div class="meta">
-          <h3>Iron Man 3 (2013)</h3>
-          <p>Director: Shane Black · 2013</p>
-        </div>
-      </div>
+  <section class="movie">
+    <img src="images2/m7.jpg" alt="Spider-Man: Homecoming">
+    <div class="movie-details">
+      <h2>Spider-Man: Homecoming</h2>
+      <p><strong>Year:</strong> 2017</p>
+      <p><strong>Rating:</strong> 7.4 / 10</p>
+      <p><strong>Box Office:</strong> 7,754.37 cr</p>
+    </div>
+  </section>
 
-      <div class="movie-card">
-        <div class="poster">IV</div>
-        <div class="meta">
-          <h3>Avengers: Age of Ultron (2015)</h3>
-          <p>Ensemble MCU · 2015</p>
-        </div>
-      </div>
+  <section class="movie right">
+    <img src="images2/m8.jpg" alt="Avengers: Infinity War">
+    <div class="movie-details">
+      <h2>Avengers: Infinity War</h2>
+      <p><strong>Year:</strong> 2018</p>
+      <p><strong>Rating:</strong> 8.4 / 10</p>
+      <p><strong>Box Office:</strong> 18,065.36 cr</p>
+    </div>
+  </section>
 
-      <div class="movie-card">
-        <div class="poster">IV</div>
-        <div class="meta">
-          <h3>Avengers: Infinity War (2018)</h3>
-          <p>Ensemble MCU · 2018</p>
-        </div>
-      </div>
-
-      <div class="movie-card">
-        <div class="poster">V</div>
-        <div class="meta">
-          <h3>Avengers: Endgame (2019)</h3>
-          <p>Ensemble MCU · 2019</p>
-        </div>
-      </div>
-    </main>
-  </div>
-
-  <div class="vignette"></div>
-  <div class="scan"></div>
-
-  <script>
-  (function(){
-    const canvas = document.getElementById('starfield');
-    const ctx = canvas.getContext('2d');
-    let DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-    let W = 0, H = 0;
-    let MAX_Z = 1200;
-    let BASE_SPEED = 1.1;
-    const COLOR_BASE = ["255,100,100","255,60,60","220,30,30","255,20,20","255,140,80"];
-
-    function setSize(){
-      DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-      W = Math.ceil(innerWidth);
-      H = Math.ceil(innerHeight);
-      canvas.style.width = W + 'px';
-      canvas.style.height = H + 'px';
-      canvas.width = Math.floor(W * DPR);
-      canvas.height = Math.floor(H * DPR);
-      ctx.setTransform(DPR,0,0,DPR,0,0);
-    }
-    setSize();
-    addEventListener('resize', ()=>{ setSize(); initStars(); });
-
-    let STAR_COUNT = Math.floor(Math.max(120, (W*H)/9000));
-    STAR_COUNT = Math.min(STAR_COUNT, 750);
-    const stars = [];
-    const comets = [];
-
-    function rand(a,b){return Math.random()*(b-a)+a}
-
-    function initStars(){
-      stars.length = 0;
-      STAR_COUNT = Math.floor(Math.max(120, (W*H)/9000));
-      STAR_COUNT = Math.min(STAR_COUNT, 750);
-      for(let i=0;i<STAR_COUNT;i++){
-        stars.push({
-          x: rand(-W, W),
-          y: rand(-H, H),
-          z: rand(2, MAX_Z),
-          size: rand(0.3, 3.6),
-          hue: Math.floor(rand(0, COLOR_BASE.length)),
-          speed: rand(0.2, 1.6),
-          tw: Math.random()*Math.PI*2,
-          flick: Math.random()*0.6 + 0.4
-        });
-      }
-    }
-
-    initStars();
-
-    let mouseX = 0, mouseY = 0;
-    addEventListener('mousemove', e=>{
-      mouseX = (e.clientX - W/2)/W*2;
-      mouseY = (e.clientY - H/2)/H*2;
-    });
-    addEventListener('touchmove', e=>{
-      const t = e.touches[0];
-      if(t){ mouseX = (t.clientX - W/2)/W*2; mouseY = (t.clientY - H/2)/H*2; }
-    },{passive:true});
-
-    function spawnComet(){
-      const fromLeft = Math.random()>.5;
-      const startY = rand(H*0.05, H*0.95);
-      const length = rand(180, 520);
-      const speed = rand(6, 14);
-      comets.push({x: fromLeft? -length : W + length, y: startY, vx: fromLeft? speed : -speed, vy: rand(-1.0,1.0), life: rand(90, 160), len: length, hue: Math.floor(rand(0,COLOR_BASE.length))});
-      if(comets.length>3) comets.shift();
-    }
-    setInterval(()=>{ if(Math.random()<0.5) spawnComet(); }, 2400);
-
-    let last = performance.now();
-    function frame(now){
-      const dt = Math.min(60, now-last)/16.6; last = now;
-      ctx.globalCompositeOperation = 'source-over';
-      ctx.fillStyle = 'rgba(4,2,2,0.28)';
-      ctx.fillRect(0,0,W,H);
-      ctx.globalCompositeOperation = 'lighter';
-      const cx = W/2 + mouseX*180;
-      const cy = H/2 + mouseY*120;
-
-      for(let i=0;i<stars.length;i++){
-        const s = stars[i];
-        s.z -= (BASE_SPEED * s.speed) * dt;
-        if(s.z <= 0.6){
-          s.x = rand(-W, W);
-          s.y = rand(-H, H);
-          s.z = MAX_Z;
-          s.size = rand(0.3,3.6);
-          s.speed = rand(0.2,1.6);
-          s.hue = Math.floor(rand(0, COLOR_BASE.length));
-          s.tw = Math.random()*Math.PI*2;
-          s.flick = Math.random()*0.6 + 0.4;
-          continue;
-        }
-        const scale = 900 / s.z;
-        const sx = (s.x * scale) + cx + (1 - s.z / MAX_Z) * (mouseX*260);
-        const sy = (s.y * scale) + cy + (1 - s.z / MAX_Z) * (mouseY*180);
-        const alpha = Math.min(1, (1 - s.z / MAX_Z) * 2.1) * s.flick;
-        const radius = s.size * (1 + (1 - s.z / MAX_Z) * 8);
-        const tw = 0.6 + Math.sin((now/260) + s.tw) * 0.55;
-        drawStar(sx, sy, radius*tw, alpha, s.hue, Math.max(0.2, s.size/2));
-        if(s.z < MAX_Z*0.35){
-          const trailLen = Math.min(16, (1 - s.z / MAX_Z) * 120);
-          ctx.beginPath();
-          ctx.moveTo(sx - s.speed*2, sy - s.speed*2);
-          ctx.lineTo(sx - trailLen, sy - trailLen);
-          ctx.lineWidth = Math.max(0.4, radius/6);
-          ctx.strokeStyle = `rgba(${COLOR_BASE[s.hue]}, ${Math.min(0.18, alpha*0.2)})`;
-          ctx.stroke();
-        }
-      }
-
-      for(let i=comets.length-1;i>=0;i--){
-        const c = comets[i];
-        c.x += c.vx * dt;
-        c.y += c.vy * dt;
-        c.life -= dt;
-        const px = c.x, py = c.y;
-        const tailX = px - c.vx * 6;
-        const tailY = py - c.vy * 6;
-        const g = ctx.createLinearGradient(px,py,tailX,tailY);
-        const base = COLOR_BASE[c.hue];
-        g.addColorStop(0, `rgba(${base},0.98)`);
-        g.addColorStop(0.5, `rgba(${base},0.25)`);
-        g.addColorStop(1, 'rgba(0,0,0,0)');
-        ctx.beginPath();
-        ctx.moveTo(px,py);
-        ctx.lineTo(tailX,tailY);
-        ctx.lineWidth = Math.max(2, Math.min(14, c.len/80));
-        ctx.strokeStyle = g;
-        ctx.stroke();
-        drawStar(px, py, Math.min(18, Math.max(6, c.len/40)), 1, c.hue, 4);
-        if(c.life <= 0 || px < -c.len || px > W + c.len) comets.splice(i,1);
-      }
-
-      ctx.globalCompositeOperation = 'source-over';
-      const vg = ctx.createRadialGradient(W/2, H/2, Math.max(W,H)/6, W/2, H/2, Math.max(W,H)/1.05);
-      vg.addColorStop(0, 'rgba(0,0,0,0)');
-      vg.addColorStop(1, 'rgba(0,0,0,0.45)');
-      ctx.fillStyle = vg;
-      ctx.fillRect(0,0,W,H);
-
-      requestAnimationFrame(frame);
-    }
-
-    function drawStar(x,y,r,alpha,ci,coreR){
-      const base = COLOR_BASE[ci];
-      const outer = ctx.createRadialGradient(x,y,0,x,y,Math.max(2, r*4));
-      outer.addColorStop(0, `rgba(${base},${Math.min(1, alpha*0.95)})`);
-      outer.addColorStop(0.12, `rgba(${base},${Math.max(0.18, alpha*0.45)})`);
-      outer.addColorStop(0.5, `rgba(90,10,10,${Math.max(0.03, alpha*0.08)})`);
-      outer.addColorStop(1, 'rgba(0,0,0,0)');
-      ctx.fillStyle = outer;
-      ctx.beginPath();
-      ctx.arc(x,y,Math.max(1, r*3.8),0,Math.PI*2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(${base},${Math.min(1, alpha*1.15)})`;
-      ctx.arc(x,y,Math.max(0.4, coreR),0,Math.PI*2);
-      ctx.fill();
-    }
-
-    setSize();
-    initStars();
-    ctx.fillStyle = 'black'; ctx.fillRect(0,0,W,H);
-    requestAnimationFrame(frame);
-
-    window.__starEnh = {
-      spawnComet, setDensity: (d)=>{ STAR_COUNT = Math.max(60, Math.min(1200, Math.floor(d))); initStars(); },
-      setSpeed(s){ BASE_SPEED = s; }
-    };
-  })();
-  </script>
+  <section class="movie">
+    <img src="images2/m9.jpg" alt="Avengers: Endgame">
+    <div class="movie-details">
+      <h2>Avengers: Endgame</h2>
+      <p><strong>Year:</strong> 2019</p>
+      <p><strong>Rating:</strong> 8.4 / 10</p>
+      <p><strong>Box Office:</strong> 24,640.66 cr</p>
+    </div>
+  </section>
+</main>
 </body>
 </html>
