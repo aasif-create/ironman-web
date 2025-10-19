@@ -29,12 +29,14 @@ body{
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 20% 20%, rgba(255,80,80,0.15) 0%, transparent 70%),
-    radial-gradient(circle at 80% 60%, rgba(255,40,40,0.12) 0%, transparent 70%),
-    radial-gradient(circle at 50% 90%, rgba(255,0,0,0.1) 0%, transparent 60%),
-    #000;
+    radial-gradient(circle at 20% 20%, rgba(210, 82, 82, 0.989) 0%, transparent 70%),
+    radial-gradient(circle at 80% 60%, rgba(218, 51, 51, 0.966) 0%, transparent 70%),
+    radial-gradient(circle at 50% 90%, rgb(182, 135, 135) 0%, transparent 60%),
+    #e1d9d9;
   background-blend-mode: screen;
 }
+
+
 .site-wrap{
   position:fixed;
   top:clamp(10px,3.6vh,26px);
@@ -184,11 +186,16 @@ body{
   object-position: center center;
   z-index: 998;
   pointer-events: none;
-  background: rgb(229,64,64);
+  background: 
+    radial-gradient(circle, rgba(236, 52, 52, 0.821) 1px, transparent 1px) 0 0 / 10px 10px,
+    radial-gradient(circle, rgba(187, 80, 80, 0.792) 1px, transparent 1px) 5px 5px / 10px 10px,
+    rgb(0,0,0);
+  background-blend-mode: screen;
   opacity: 0;
   transition: opacity 0.28s ease;
   display: block;
 }
+
 
 #welcomeBtn {
   position: relative;
