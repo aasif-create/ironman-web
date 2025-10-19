@@ -150,6 +150,30 @@ body{
   transform:rotate(50deg) scale(1.05);
   box-shadow:0 0 35px rgba(255,80,80,0.8), inset 0 -6px 20px rgba(0,0,0,0.25);
 }
+#skipBtn{
+  position:fixed;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  background: linear-gradient(135deg,var(--red-1),var(--red-2));
+  color:#fdf502;
+  border:none;
+  padding:12px 28px;
+  border-radius:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+#skipBtn:hover{
+  background:black;
+  color:var(--red-1);
+  transform:scale(1.05);
+  box-shadow:0 0 15px rgba(255,0,0,0.6);
+}
+
 
 #introVideo {
   position: fixed;

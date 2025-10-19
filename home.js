@@ -1,6 +1,18 @@
 const els = Array.from(document.querySelectorAll('.action'));
 const reactor = document.getElementById('reactor');
 
+const backIntroBtn = document.getElementById('backIntroBtn');
+if(backIntroBtn){
+  backIntroBtn.addEventListener('click', ()=> location.href='index.html');
+  backIntroBtn.addEventListener('keydown', e => {
+    if(e.key==='Enter' || e.key===' '){
+      e.preventDefault();
+      backIntroBtn.click();
+    }
+  });
+}
+
+
 function go(h){
   if(!h) return;
   location.href = h;
@@ -30,4 +42,6 @@ window.addEventListener('load',()=>{
   if(reactor&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     reactor.animate([{transform:'scale(.98)'},{transform:'scale(1.02)'},{transform:'scale(.98)'}],{duration:2400,iterations:Infinity,easing:'ease-in-out'});
   }
+
+
 });
