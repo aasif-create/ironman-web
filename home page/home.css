@@ -189,7 +189,7 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-
 
 
 .reactor:focus{outline:none; box-shadow:0 0 0 12px rgba(255,120,80,0.06)}
-.reactor:hover{transform:scale(1.06); box-shadow:0 30px 90px rgba(242, 255, 0, 0.884)}
+.reactor:hover{transform:scale(2.06); box-shadow:0 30px 90px rgb(246, 254, 14); filter:brightness(1.4);}
 
 .grid{display:grid; gap:12px}
 
