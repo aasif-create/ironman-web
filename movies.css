@@ -54,6 +54,7 @@ body{
 }
 
 .movies-header h1{
+  transform: translateX(120px); 
   text-align:center;
   font-size:clamp(28px,6vw,48px);
   text-transform:uppercase;
