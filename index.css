@@ -33,7 +33,7 @@ body{
   user-select:none;
   transition:transform .25s ease,filter .3s ease;
   filter: brightness(1) saturate(1.1);
-  background-color:#f2ea13e3;
+  background-color:#e6892de9;
 }
 .site-wrap{
   position:fixed;
@@ -161,7 +161,7 @@ body{
   object-fit:cover;
   object-position:center center;
   z-index:999;
-  background:rgb(253, 65, 65);
+  background:rgb(239, 124, 124);
   opacity:0;
   transition:opacity .28s ease;
 }
