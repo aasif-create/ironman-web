@@ -11,12 +11,12 @@ btn.addEventListener('click', async () => {
     try { await video.play() }
     catch (err) {
       try { video.muted = true; await video.play() }
-      catch { window.location.href = 'home_page/home.html'; return }
+      catch { window.location.href = 'home.html'; return }
     }
   }, 160)
 })
-video.addEventListener('ended', () => window.location.href = 'home_page/home.html')
-video.addEventListener('error', () => window.location.href = 'home_page/home.html')
+video.addEventListener('ended', () => window.location.href = 'home.html')
+video.addEventListener('error', () => window.location.href = 'home.html')
 btn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click() } })
 function applyFit() {
   const vw = window.innerWidth
