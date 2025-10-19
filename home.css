@@ -64,7 +64,7 @@ body {
   text-transform: uppercase;
   background: linear-gradient(90deg, #2b0000, #ff1b1b, #ff4444, #000);
   -webkit-background-clip: text;
-  background-clip: text; /* ✅ fixed warning */
+  background-clip: text;
   color: transparent;
   text-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
   z-index: 5;
