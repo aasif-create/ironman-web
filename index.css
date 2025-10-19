@@ -26,15 +26,15 @@ body{
   left: 0;
   width: 100vw;
   height: 100dvh;
-  object-fit: cover;
-  object-position: center center;
   z-index: 0;
   pointer-events: none;
-  -webkit-user-select: none;
-  user-select: none;
-  background-color: #e6892de9;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,80,80,0.15) 0%, transparent 70%),
+    radial-gradient(circle at 80% 60%, rgba(255,40,40,0.12) 0%, transparent 70%),
+    radial-gradient(circle at 50% 90%, rgba(255,0,0,0.1) 0%, transparent 60%),
+    #000;
+  background-blend-mode: screen;
 }
-
 .site-wrap{
   position:fixed;
   top:clamp(10px,3.6vh,26px);
