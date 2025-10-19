@@ -14,6 +14,35 @@ body{
   min-height:100vh;
 }
 
+.back-btn{
+  position:fixed;
+  top:20px;
+  left:20px;
+  z-index:100;
+  background: linear-gradient(135deg,var(--red-1),var(--red-2));
+  color:#fdf502;
+  border:none;
+  padding:12px 24px;
+  border-radius:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.back-btn:hover{
+  transform: scale(1.05);
+  background: linear-gradient(135deg,#000000,#111111);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.9);
+}
+
+
+.back-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px var(--red-1);
+}
+
 .movies-header{
   text-align:center;
   padding:20px;
