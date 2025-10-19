@@ -168,27 +168,28 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-
 
 .reactor .reactor-svg{width:70%; height:70%; filter:drop-shadow(0 6px 28px rgba(255,120,80,0.16))}
 
-.reactor-label{
-  position:absolute;
-  inset:auto;
-  display:block;
-  font-weight:900;
-  letter-spacing:1px;
-  color:#fff;
-  font-size:12px;
-  line-height:1.05;
-  padding:8px 10px;
-  border-radius:10px;
-  pointer-events:none;
-  mix-blend-mode:screen;
-  text-transform:uppercase;
-  text-align:center;
-  transform:translateY(2px);
-  text-shadow:0 6px 18px rgba(0,0,0,0.45);
+.reactor-label {
+  position: absolute;
+  inset: auto;
+  display: block;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #eaf6ff;
+  font-size: 1.3rem;
+  line-height: 1.05;
+  padding: 10px 12px;
+  border-radius: 10px;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  text-transform: uppercase;
+  text-align: center;
+  transform: translateY(4px);
+  text-shadow: 0 0 20px rgba(57,182,255,0.6);
 }
 
+
 .reactor:focus{outline:none; box-shadow:0 0 0 12px rgba(255,120,80,0.06)}
-.reactor:hover{transform:scale(1.06); box-shadow:0 30px 90px rgba(255,40,40,0.18)}
+.reactor:hover{transform:scale(1.06); box-shadow:0 30px 90px rgba(242, 255, 0, 0.884)}
 
 .grid{display:grid; gap:12px}
 
