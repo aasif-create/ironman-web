@@ -33,7 +33,7 @@ body{
   user-select:none;
   transition:transform .25s ease,filter .3s ease;
   filter: brightness(1) saturate(1.1);
-  background-color:#fa3c3c;
+  background-color:#f2ea13e3;
 }
 .site-wrap{
   position:fixed;
@@ -47,22 +47,27 @@ body{
   pointer-events:none;
   padding:0 16px;
 }
-.site-title{
-  pointer-events:auto;
-  margin:0;
-  font-weight:900;
-  letter-spacing:3px;
-  font-size:clamp(36px,8vw,80px);
-  text-transform:uppercase;
-  background:linear-gradient(90deg,var(--red-2),#ef5757,rgba(211,36,36,0.9));
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  text-shadow:0 8px 40px rgba(0,0,0,0.6);
-  padding:0;
-  border-radius:0;
-  backdrop-filter:none;
+.site-title {
+  pointer-events: auto;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  font-size: clamp(42px, 9vw, 120px);
+  line-height: 1.1;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(180deg, #ff1b1b, #2b0000 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:
+    0 0 25px rgba(255, 0, 0, 0.7),
+    0 0 60px rgba(255, 0, 0, 0.4),
+    0 0 100px rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
 }
+
 
 
 .wrap{
