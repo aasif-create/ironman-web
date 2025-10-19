@@ -156,8 +156,8 @@ body{
   left:50%;
   transform:translateX(-50%);
   z-index:1000;
-  background: linear-gradient(135deg,var(--red-1),var(--red-2));
-  color:#fdf502;
+  background:#ffffff;
+  color:#000000;
   border:none;
   padding:12px 28px;
   border-radius:12px;
