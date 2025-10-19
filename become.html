@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Become Iron Man</title>
+<link rel="stylesheet" href="become.css">
+</head>
+<body>
+
+<video id="transitionVideo" autoplay muted playsinline>
+  <source src="video/IRONMANCLIP.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<button class="skip-btn" onclick="location.href='home.html'">SKIP TRANSITION</button>
+
+<script>
+const video = document.getElementById('transitionVideo');
+video.addEventListener('ended', () => {
+  window.location.href = 'home.html';
+});
+</script>
+
+</body>
+</html>
