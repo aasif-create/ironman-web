@@ -9,7 +9,7 @@
 <body>
 
 <video id="transitionVideo" autoplay muted playsinline>
-  <source src="video/INTRO_VIDEO.mp4" type="video/mp4">
+  <source src="video/BECOME_VIDEO.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -17,6 +17,9 @@
 
 <script>
 const video = document.getElementById('transitionVideo');
+video.addEventListener('loadeddata', () => {
+  video.classList.add('show');
+});
 video.addEventListener('ended', () => {
   window.location.href = 'home.html';
 });

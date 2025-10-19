@@ -19,32 +19,47 @@ body{
 }
 
 #transitionVideo{
+  position:fixed;
+  top:0;
+  left:0;
   width:100vw;
-  height:100vh;
+  height:100dvh;
   object-fit:cover;
   object-position:center center;
+  z-index:998;
+  pointer-events:none;
+  background:rgb(229,64,64);
+  opacity:0;
+  transition:opacity 0.28s ease;
+  display:block;
+}
+
+#transitionVideo.show{
+  opacity:1;
 }
 
 .skip-btn{
-  position:absolute;
-  bottom:40px;
-  background: linear-gradient(135deg,var(--red-1),var(--red-2));
-  color:#fdf502;
+  position:fixed;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  background:#ffffff;
+  color:#000000;
   border:none;
-  padding:14px 28px;
+  padding:12px 28px;
   border-radius:12px;
   font-weight:900;
   text-transform:uppercase;
   cursor:pointer;
-  z-index:10;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .skip-btn:hover{
   background:black;
   color:var(--red-1);
   transform:scale(1.05);
-  box-shadow:0 0 20px rgba(255,0,0,0.7);
+  box-shadow:0 0 15px rgba(255,0,0,0.6);
 }
 
 @media(max-width:480px){

@@ -46,6 +46,7 @@ body{
   z-index:10;
 }
 .powers-header h1{
+  transform: translateX(120px);
   font-size:clamp(28px,6vw,48px);
   text-transform:uppercase;
   letter-spacing:3px;

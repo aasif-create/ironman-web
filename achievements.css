@@ -47,6 +47,7 @@ body{
 }
 
 .achievements-header h1{
+    transform: translateX(100px);
   font-size:clamp(28px,6vw,48px);
   text-transform:uppercase;
   letter-spacing:3px;
