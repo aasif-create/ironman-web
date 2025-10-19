@@ -155,16 +155,24 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100dvh;
   object-fit: cover;
   object-position: center center;
-  z-index: 999;
-  background: rgb(229, 64, 64);
+  z-index: 998;
+  pointer-events: none;
+  background: rgb(229,64,64);
   opacity: 0;
   transition: opacity 0.28s ease;
   display: block;
 }
+
+#welcomeBtn {
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+
 
 #introVideo.show{display:block;opacity:1}
 @media (orientation:portrait){
