@@ -1,0 +1,191 @@
+:root {
+  --bg-deep: #070204;
+  --accent-1: #ff1e3a;
+  --accent-2: #ff6b42;
+  --arc-1: #39b6ff;
+  --arc-neon: 0 14px 60px rgba(57, 182, 255, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-deep);
+  color: #fff;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url('images/ARC_REACTOR PIC.jpg') center/cover no-repeat;
+  z-index: 0;
+  filter: brightness(0.9);
+}
+
+.site-title {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 9vw, 120px);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #2b0000, #ff1b1b, #ff4444, #000);
+  -webkit-background-clip: text;
+  background-clip: text; /* ✅ fixed warning */
+  color: transparent;
+  text-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.stage {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.corner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 70px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(137, 184, 211, 0.9), rgba(82, 169, 240, 0.9));
+  box-shadow: 0 12px 40px rgba(57, 182, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.corner button.action {
+  all: unset;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 0 8px rgba(57, 182, 255, 0.8);
+}
+
+.corner:hover {
+  transform: scale(1.05);
+  background: linear-gradient(180deg, #fff, #a2cfff);
+}
+
+.corner:hover button.action {
+  color: #000;
+}
+
+.top-left {
+  top: 20%;
+  left: 10%;
+}
+
+.top-right {
+  top: 20%;
+  right: 10%;
+}
+
+.bottom-left {
+  bottom: 20%;
+  left: 10%;
+}
+
+.bottom-right {
+  bottom: 20%;
+  right: 10%;
+}
+
+.core-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.reactor {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), rgba(255, 80, 80, 0.08)),
+    linear-gradient(180deg, var(--accent-1), var(--accent-2));
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 20px 80px rgba(255, 60, 60, 0.25);
+  transition: all 0.3s ease;
+}
+
+.reactor:hover {
+  transform: scale(1.1);
+  filter: brightness(1.4);
+  box-shadow: 0 30px 90px rgb(246, 254, 14);
+}
+
+.reactor-label {
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(57, 182, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: clamp(28px, 10vw, 64px);
+    top: 5%;
+  }
+  .corner {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+  .stage {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 100px;
+  }
+  .core-wrap {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  .reactor {
+    width: 130px;
+    height: 130px;
+  }
+  .reactor-label {
+    font-size: 0.8rem;
+  }
+  .site-title {
+    font-size: clamp(26px, 11vw, 56px);
+  }
+}
