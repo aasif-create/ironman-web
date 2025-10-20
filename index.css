@@ -29,9 +29,9 @@ body{
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 20% 20%, rgba(210, 82, 82, 0.989) 0%, transparent 70%),
-    radial-gradient(circle at 80% 60%, rgba(218, 51, 51, 0.966) 0%, transparent 70%),
-    radial-gradient(circle at 50% 90%, rgb(182, 135, 135) 0%, transparent 60%),
+    radial-gradient(circle at 20% 20%, rgba(253, 193, 90, 0.989) 0%, transparent 70%),
+    radial-gradient(circle at 80% 60%, rgba(255, 68, 6, 0.966) 0%, transparent 70%),
+    radial-gradient(circle at 50% 90%, rgb(248, 153, 0) 0%, transparent 60%),
     #e1d9d9;
   background-blend-mode: screen;
 }
@@ -206,12 +206,30 @@ body{
 
 #introVideo.show{display:block;opacity:1}
 @media (orientation:portrait){
-  #bgImg{object-fit:contain;object-position:center center}
-  #introVideo{object-fit:contain;object-position:center center}
-  .wrap{padding-top:6vh;padding-bottom:6vh}
-  #welcomeBtn{width:clamp(84px,26vw,140px);height:clamp(84px,26vw,140px)}
-  .site-title{font-size:clamp(12px,4vw,18px);padding:6px 10px}
+  #bgImg{
+    object-fit: cover;
+    object-position: center center;
+    height: 100lvh;
+  }
+  #introVideo{
+    object-fit: cover;
+    object-position: center center;
+    height: 100lvh;
+  }
+  .wrap{
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+  #welcomeBtn{
+    width: clamp(100px, 30vw, 160px);
+    height: clamp(100px, 30vw, 160px);
+  }
+  .site-title{
+    font-size: clamp(22px, 6vw, 40px);
+    padding: 10px;
+  }
 }
+
 @media (orientation:landscape){
   #bgImg{object-fit:cover;object-position:center top}
   #introVideo{object-fit:cover;object-position:center center}
