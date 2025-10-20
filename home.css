@@ -43,13 +43,11 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-
 #backIntroBtn:hover {
   background: black;
   color: #ff1e3a;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
-
 .site-title {
   position: absolute;
   top: 8%;

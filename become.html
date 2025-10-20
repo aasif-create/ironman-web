@@ -7,14 +7,11 @@
 <link rel="stylesheet" href="become.css">
 </head>
 <body>
-
 <video id="transitionVideo" autoplay playsinline>
   <source src="video/BECOME_VIDEO.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
 <button class="skip-btn" onclick="location.href='home.html'">SKIP TRANSITION</button>
-
 <script>
 const video = document.getElementById('transitionVideo');
 video.addEventListener('loadeddata', () => {
@@ -24,6 +21,5 @@ video.addEventListener('ended', () => {
   window.location.href = 'home.html';
 });
 </script>
-
 </body>
 </html>

@@ -35,8 +35,6 @@ body{
     #e86012;
   background-blend-mode: screen;
 }
-
-
 .site-wrap{
   position:fixed;
   top:clamp(10px,3.6vh,26px);
@@ -69,9 +67,6 @@ body{
     0 0 100px rgba(0, 0, 0, 0.8);
   padding: 10px 0;
 }
-
-
-
 .wrap{
   position:relative;
   z-index:3;
@@ -104,12 +99,10 @@ body{
   box-shadow:0 10px 40px rgba(232, 231, 231, 0.996), inset 0 -6px 20px rgba(0,0,0,0.18);
   overflow:hidden;
 }
-
 #welcomeBtn span {
   display: block;
   transform: rotate(-45deg);
 }
-
 #welcomeBtn::before{
   content:"";
   position:absolute;
@@ -168,14 +161,11 @@ body{
   cursor:pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-
 #skipBtn:hover{
   background:black;
   color:var(--red-1);
   box-shadow:0 0 15px rgba(255,0,0,0.6);
 }
-
-
 #introVideo {
   position: fixed;
   top: 0;
@@ -195,15 +185,11 @@ body{
   transition: opacity 0.28s ease;
   display: block;
 }
-
-
 #welcomeBtn {
   position: relative;
   z-index: 1000;
   cursor: pointer;
 }
-
-
 #introVideo.show{display:block;opacity:1}
 @media (orientation:portrait){
   #bgImg{
@@ -229,7 +215,6 @@ body{
     padding: 10px;
   }
 }
-
 @media (orientation:landscape){
   #bgImg{object-fit:cover;object-position:center top}
   #introVideo{object-fit:cover;object-position:center center}

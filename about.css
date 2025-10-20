@@ -45,7 +45,6 @@ body{
   top:0;
   z-index:10;
 }
-
 .about-header h1{
   transform: translateX(120px);
   font-size:clamp(28px,6vw,48px);

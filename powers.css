@@ -6,7 +6,6 @@
   --shadow:0 8px 30px rgba(0,0,0,0.5);
   --hover-glow:0 0 25px rgba(255,0,0,0.8);
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:'Inter',sans-serif;
@@ -14,7 +13,6 @@ body{
   color:var(--text);
   min-height:100vh;
 }
-
 .back-btn{
   position:fixed;
   top:20px;
@@ -46,7 +44,7 @@ body{
   z-index:10;
 }
 .powers-header h1{
-  transform: translateX(120px);
+  transform: translateX(105px);
   font-size:clamp(28px,6vw,48px);
   text-transform:uppercase;
   letter-spacing:3px;

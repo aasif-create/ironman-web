@@ -52,7 +52,6 @@ body{
   top:0;
   z-index:10;
 }
-
 .movies-header h1{
   transform: translateX(120px); 
   text-align:center;
@@ -61,7 +60,6 @@ body{
   letter-spacing:3px;
   color:#fff;
 }
-
 .movies-container{
   display:flex;
   flex-direction:column;

@@ -47,13 +47,12 @@ body{
 }
 
 .achievements-header h1{
-    transform: translateX(100px);
+  transform: translateX(100px);
   font-size:clamp(28px,6vw,48px);
   text-transform:uppercase;
   letter-spacing:3px;
   color:#fff;
 }
-
 .achievements-container{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));

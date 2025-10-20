@@ -2,7 +2,6 @@ const btn = document.getElementById('welcomeBtn')
 const video = document.getElementById('introVideo')
 const skipBtn = document.getElementById('skipBtn')
 const bgImg = document.getElementById('bgImg')
-
 btn.addEventListener('click', async () => {
   btn.classList.add('pop')
   btn.style.pointerEvents = 'none'
@@ -18,21 +17,17 @@ btn.addEventListener('click', async () => {
     }
   }, 160)
 })
-
 skipBtn.addEventListener('click', () => {
   window.location.href = 'home.html'
 })
-
 video.addEventListener('ended', () => window.location.href = 'home.html')
 video.addEventListener('error', () => window.location.href = 'home.html')
-
 btn.addEventListener('keydown', (e) => { 
   if (e.key === 'Enter' || e.key === ' ') { 
     e.preventDefault(); 
     btn.click() 
   } 
 })
-
 function applyFit() {
   const vw = window.innerWidth
   const vh = window.innerHeight
@@ -52,7 +47,6 @@ function applyFit() {
   video.style.width = '100vw'
   video.style.height = '100vh'
 }
-
 window.addEventListener('load', applyFit)
 window.addEventListener('resize', applyFit)
 window.addEventListener('orientationchange', applyFit)

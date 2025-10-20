@@ -37,7 +37,6 @@ if(reactor){
     }
   });
 }
-
 window.addEventListener('load', ()=>{
   corners.forEach((c,i)=>c.animate([{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],{duration:540,delay:120*i,fill:'forwards',easing:'cubic-bezier(.2,.9,.3,1)'}));
   if(reactor && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
