@@ -25,7 +25,7 @@ body{
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100dvh;
+  height: 100lvh;
   z-index: 0;
   pointer-events: none;
   background:
@@ -181,7 +181,7 @@ body{
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100dvh;
+  height: 100lvh;
   object-fit: cover;
   object-position: center center;
   z-index: 998;
